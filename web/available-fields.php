@@ -2,8 +2,8 @@
     include('library.php');
     extract($_REQUEST);
     $conn = get_database_connection();
-    $sql = "select area_name from areas, join applications on app_dates_requested <> $date";
-    
+    $sql = "select area_name from areas, join applications on app_dates_requested <> $date, where area";
+    echo $sql
     // $result = $conn->query($sql);
     // $row = $result -> fetch_assoc();
 ?>
