@@ -18,7 +18,7 @@
 
 
 <body>
-    <img class="slide" src="forge.jpeg" width="100%" height="90%">
+    <img class="landingimg" src="forge.jpeg" width="100%" height="90%">
 
 
     <!-- <div class="background">
