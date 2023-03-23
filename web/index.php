@@ -33,8 +33,8 @@
     <div class="container">
         <div class="button-div">
             <h1 class="field-text">Proceed to Form</h1>
-            <button class="button button5 centered">Apply Now</button>
-            <button class="button button5 centered">View Available Fields</button>
+            <a href="form.php"><button class="button button5 centered">Apply Now</button></a>
+            <a href="available-fields.php"><button class="button button5 centered">View Available Fields</button></a>
 
         </div>
     </div>
