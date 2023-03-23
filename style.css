@@ -1,0 +1,44 @@
+.titleTicket {
+    text-align: center;
+    color: black;
+    font-size: xx-large;
+    font-weight: 900;
+    
+}
+
+.container{
+    padding-top: 5%;
+    padding-bottom: 2%;
+}
+
+.credTicket {
+    text-align: center;
+    font-size: 32;
+    font-weight: 800;
+}
+
+.addTicket {
+    text-align: center;
+    font-size: 18;
+    font-weight: 800;
+}
+
+
+.form-name {
+    border: none;
+    border-bottom: 2px solid black;
+    width: 35%;
+    border-radius: 0%;
+}
+
+.conatiner-form {
+    padding-left: 25%;
+    padding-right: 25%;
+}
+
+.form-text {
+    color: grey;
+    font-size: small;
+    font-weight: 400;
+
+}
