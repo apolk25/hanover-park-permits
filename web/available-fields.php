@@ -2,8 +2,8 @@
     include('library.php');
     extract($_REQUEST);
     $conn = get_database_connection();
-    $sql = "select area_name from areas, join applications on app_dates_requested <> $date, where area";
-    echo $sql
+    // $sql = "select area_name from areas, join applications on app_dates_requested <> $date, where area";
+    // echo $sql
     // $result = $conn->query($sql);
     // $row = $result -> fetch_assoc();
 ?>
@@ -16,6 +16,11 @@
     <title>Available Fields</title>
 </head>
 <body>
-    
+    <form action="daterequest.php" method="POST">
+        <label for="fname">Enter Date (YYYY-MM-DD): </label><br>
+        <input type="text" id="date" name="date"><br>
+        <input type="submit" value="Submit">
+    </form> 
+
 </body>
 </html>
