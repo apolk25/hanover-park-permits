@@ -1,5 +1,5 @@
 <?php
-
+include('library.php');
 /*************************************************************************************************
  * ticketNew.php
  *
@@ -48,7 +48,7 @@
 
 
 <form action="insert.php" method="POST">
-    <div class="conatiner-form">
+    <div class="container-form">
         <input type="name" class="form-control form-name" id="exampleInputEmail1" aria-describedby="emailHelp">
         <div id="emailHelp" class="form-text">Name Of Applicant</div>
 
@@ -108,7 +108,8 @@
         <div id="emailHelp" class="form-text">Number of Teams</div>
 
 
-        
+        <button id=save-button >Save</button> 
+        <a href="index.php?content=list" class="btn btn-secondary" role="button">Cancel</a>
     </div>
     
     
@@ -131,3 +132,4 @@
     <!-- <button type="submit" class="btn btn-primary">Save</button>
     <a href="index.php?content=list" class="btn btn-secondary" role="button">Cancel</a> -->
 </form>
+
