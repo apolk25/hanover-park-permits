@@ -13,7 +13,7 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="style.css?v=<?php echo rand(); ?>">
 
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
+<!-- <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">Hanover Sports</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -35,9 +35,9 @@
       </ul>
     </div>
   </div>
-</nav>
+</nav> -->
 
-<div class="container">
+<div class="container-fluid">
     <!-- <h1 class="titleTicket">New Ticket</h1> -->
     <h2 class="credTicket">Hanover Parks & Recreation</h2>
     <h3 class="addTicket">665 Center Street</h3>
@@ -49,82 +49,29 @@
 
 <form action="insert.php" method="POST">
     <div class="conatiner-form">
-        <input type="name" class="form-control form-name" id="exampleInputEmail1" aria-describedby="emailHelp">
-        <div id="emailHelp" class="form-text">Name Of Applicant</div>
+      <div class="form-text">First Name Of Applicant</div>
+      <input type="name" class="form-control form-name">
 
-        <input type="name" class="form-control form-name" id="exampleInputEmail1" aria-describedby="emailHelp">
-        <div id="emailHelp" class="form-text">Name Of Organization</div>
+      <div class="form-text">Last Name Of Applicant</div>
+      <input type="name" class="form-control form-name">
 
-        <input type="name" class="form-control form-name" id="exampleInputEmail1" aria-describedby="emailHelp">
-        <div id="emailHelp" class="form-text">Mailing Address</div>
+      <select class="form-select"">
+          <option selected>Fields Requested</option>
+          <option value="1">One</option>
+          <option value="2">Two</option>
+          <option value="3">Three</option>
+      </select>
 
-        <input type="name" class="form-control form-name" id="exampleInputEmail1" aria-describedby="emailHelp">
-        <div id="emailHelp" class="form-text">Phone</div>
 
-        <input type="name" class="form-control form-name" id="exampleInputEmail1" aria-describedby="emailHelp">
-        <div id="emailHelp" class="form-text">Email</div>
 
-        <input type="name" class="form-control form-name" id="exampleInputEmail1" aria-describedby="emailHelp">
-        <div id="emailHelp" class="form-text">Name Of Applicant</div>
-
-        <input type="name" class="form-control form-name" id="exampleInputEmail1" aria-describedby="emailHelp">
-        <div id="emailHelp" class="form-text">Tier</div>
-
-        <select class="form-select" aria-label="Default select example">
-            <option selected>Fields Requested</option>
-            <option value="1">One</option>
-            <option value="2">Two</option>
-            <option value="3">Three</option>
-        </select>
-
-        <input type="name" class="form-control form-name" id="exampleInputEmail1" aria-describedby="emailHelp">
-        <div id="emailHelp" class="form-text">Dates Requested</div>
-
-        <input type="name" class="form-control form-name" id="exampleInputEmail1" aria-describedby="emailHelp">
-        <div id="emailHelp" class="form-text">Day(s) of Week</div>
-
-        <input type="name" class="form-control form-name" id="exampleInputEmail1" aria-describedby="emailHelp">
-        <div id="emailHelp" class="form-text">Entrance Time To Facility</div>
-
-        <input type="name" class="form-control form-name" id="exampleInputEmail1" aria-describedby="emailHelp">
-        <div id="emailHelp" class="form-text">Exit Time From Facility</div>
-
-        <input type="name" class="form-control form-name" id="exampleInputEmail1" aria-describedby="emailHelp">
-        <div id="emailHelp" class="form-text">Time Activity Starts</div>
-
-        <input type="name" class="form-control form-name" id="exampleInputEmail1" aria-describedby="emailHelp">
-        <div id="emailHelp" class="form-text">Time Activity ends</div>
-
-        <input type="name" class="form-control form-name" id="exampleInputEmail1" aria-describedby="emailHelp">
-        <div id="emailHelp" class="form-text">Nature Of Activity</div>
-
-        <input type="name" class="form-control form-name" id="exampleInputEmail1" aria-describedby="emailHelp">
-        <div id="emailHelp" class="form-text">Estimated # of People Attending</div>
-
-        <input type="name" class="form-control form-name" id="exampleInputEmail1" aria-describedby="emailHelp">
-        <div id="emailHelp" class="form-text">Number Of Registrants</div>
-
-        <input type="name" class="form-control form-name" id="exampleInputEmail1" aria-describedby="emailHelp">
-        <div id="emailHelp" class="form-text">Number of Teams</div>
+        
 
 
         
     </div>
     
     
-    <!-- <div class="row g-3 align-items-center">
-    <div class="col-auto">
-        <label for="inputPassword6" class="col-form-label">Password</label>
-    </div>
-    <div class="col-auto">
-        <input type="password" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline">
-    </div>
-    <div class="col-auto">
-        <span id="passwordHelpInline" class="form-text">
-        Must be 8-20 characters long.
-        </span>
-    </div>
-    </div> -->
+    
     
 
 

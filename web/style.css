@@ -75,3 +75,34 @@
     border-radius: 10px;
 }
 
+/* Form.php */
+
+.container-fluid {
+    padding: 5%;
+    
+}
+.credTicket {
+    text-align: center;
+    font-size: 30;
+    color: black;
+    font-weight: 900;
+}
+
+.addTicket {
+    text-align: center;
+    font-size: 25;
+    color: black;
+    font-weight: 700;
+}
+
+.conatiner-form {
+    padding-top: 5%;
+    align-items: center;
+    text-align: center;
+    
+}
+
+.form-name {
+    width: 10%;
+    align-items: center;
+}
