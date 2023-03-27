@@ -49,63 +49,60 @@
 
 <form action="insert.php" method="POST">
     <div class="conatiner-form">
-        <input type="name" class="form-control form-name" id="exampleInputEmail1" aria-describedby="emailHelp">
-        <div id="emailHelp" class="form-text">Name Of Applicant</div>
+        <input name="name" >
+        <div class="form-text">Name Of Applicant</div>
 
-        <input type="name" class="form-control form-name" id="exampleInputEmail1" aria-describedby="emailHelp">
-        <div id="emailHelp" class="form-text">Name Of Organization</div>
+        <input name="org" >
+        <div class="form-text">Name Of Organization</div>
 
-        <input type="name" class="form-control form-name" id="exampleInputEmail1" aria-describedby="emailHelp">
-        <div id="emailHelp" class="form-text">Mailing Address</div>
+        <input name="address" >
+        <div class="form-text">Mailing Address</div>
 
-        <input type="name" class="form-control form-name" id="exampleInputEmail1" aria-describedby="emailHelp">
-        <div id="emailHelp" class="form-text">Phone</div>
+        <input name="phone" >
+        <div class="form-text">Phone</div>
 
-        <input type="name" class="form-control form-name" id="exampleInputEmail1" aria-describedby="emailHelp">
-        <div id="emailHelp" class="form-text">Email</div>
+        <input name="email" >
+        <div class="form-text">Email</div>
 
-        <input type="name" class="form-control form-name" id="exampleInputEmail1" aria-describedby="emailHelp">
-        <div id="emailHelp" class="form-text">Name Of Applicant</div>
+        <input name="tier" >
+        <div class="form-text">Tier</div>
 
-        <input type="name" class="form-control form-name" id="exampleInputEmail1" aria-describedby="emailHelp">
-        <div id="emailHelp" class="form-text">Tier</div>
-
-        <select class="form-select" aria-label="Default select example">
+        <select name="fields_requested" class="form-select" aria-label="Default select example">
             <option selected>Fields Requested</option>
             <option value="1">One</option>
             <option value="2">Two</option>
             <option value="3">Three</option>
         </select>
 
-        <input type="name" class="form-control form-name" id="exampleInputEmail1" aria-describedby="emailHelp">
-        <div id="emailHelp" class="form-text">Dates Requested</div>
+        <input name="dates_requested">
+        <div class="form-text">Dates Requested</div>
 
-        <input type="name" class="form-control form-name" id="exampleInputEmail1" aria-describedby="emailHelp">
-        <div id="emailHelp" class="form-text">Day(s) of Week</div>
+        <input name="days_of_week">
+        <div class="form-text">Day(s) of Week</div>
 
-        <input type="name" class="form-control form-name" id="exampleInputEmail1" aria-describedby="emailHelp">
-        <div id="emailHelp" class="form-text">Entrance Time To Facility</div>
+        <input name="entrance_time">
+        <div class="form-text">Entrance Time To Facility</div>
 
-        <input type="name" class="form-control form-name" id="exampleInputEmail1" aria-describedby="emailHelp">
-        <div id="emailHelp" class="form-text">Exit Time From Facility</div>
+        <input name="exit_time">
+        <div class="form-text">Exit Time From Facility</div>
 
-        <input type="name" class="form-control form-name" id="exampleInputEmail1" aria-describedby="emailHelp">
-        <div id="emailHelp" class="form-text">Time Activity Starts</div>
+        <input name="activity_start_time">
+        <div class="form-text">Time Activity Starts</div>
 
-        <input type="name" class="form-control form-name" id="exampleInputEmail1" aria-describedby="emailHelp">
-        <div id="emailHelp" class="form-text">Time Activity ends</div>
+        <input name="activity_end_time">
+        <div class="form-text">Time Activity ends</div>
 
-        <input type="name" class="form-control form-name" id="exampleInputEmail1" aria-describedby="emailHelp">
-        <div id="emailHelp" class="form-text">Nature Of Activity</div>
+        <input name="activity_nature">
+        <div class="form-text">Nature Of Activity</div>
 
-        <input type="name" class="form-control form-name" id="exampleInputEmail1" aria-describedby="emailHelp">
-        <div id="emailHelp" class="form-text">Estimated # of People Attending</div>
+        <input name="num_people">
+        <div class="form-text">Estimated # of People Attending</div>
 
-        <input type="name" class="form-control form-name" id="exampleInputEmail1" aria-describedby="emailHelp">
-        <div id="emailHelp" class="form-text">Number Of Registrants</div>
+        <input name="num_registrants">
+        <div class="form-text">Number Of Registrants</div>
 
-        <input type="name" class="form-control form-name" id="exampleInputEmail1" aria-describedby="emailHelp">
-        <div id="emailHelp" class="form-text">Number of Teams</div>
+        <input name="num_teams">
+        <div class="form-text">Number of Teams</div>
 
 
         
