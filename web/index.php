@@ -30,7 +30,7 @@
     <div class="bottom-cover">
         <a href="https://www.hanover-ma.gov/"><img src="banner.png" class="banner"></a>
     </div>
-    <div class="container">
+    <div class="index-container">
         <div class="button-div">
             <h1 class="field-text">Proceed to Form</h1>
             <a href="form.php"><button class="button button5 centered">Apply Now</button></a>

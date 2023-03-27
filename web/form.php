@@ -48,15 +48,12 @@ include('library.php');
 
 
 <form action="insert.php" method="POST">
-<<<<<<< HEAD
-    <div class="container-form">
-        <input type="name" class="form-control form-name" id="exampleInputEmail1" aria-describedby="emailHelp">
-        <div id="emailHelp" class="form-text">Name Of Applicant</div>
-=======
-    <div class="conatiner-form">
-        <input name="name" >
-        <div class="form-text">Name Of Applicant</div>
->>>>>>> fbfdfd61a1eb83b6ae83db0f493c8f7658b3c8fa
+  <div class="conatiner-form">
+        <input type="cus_first_name" >
+        <div class="form-text">First Name Of Applicant</div>
+
+        <input name="cus_last_name" >
+        <div class="form-text">Last Name Of Applicant</div>
 
         <input name="org" >
         <div class="form-text">Name Of Organization</div>
