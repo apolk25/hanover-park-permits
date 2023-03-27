@@ -34,16 +34,16 @@ $loc_name = $conn->real_escape_string($loc_name);
 // Build the INSERT statement
 $sql = <<<SQL
 INSERT INTO customers (cus_first_name, cus_last_name, cus_org, cus_phone,cus_email, cus_address)
-       VALUES ($cus_first_name, $cus_last_name, $cus_org, cus_phone,cus_email, cus_address)
+       VALUES ($cus_first_name, $cus_last_name, $cus_org, $cus_phone, $cus_email, $cus_address)
 
 INSERT INTO applications ( app_tier, app_time_enter, app_time_exit, $app_activity_start, app_activity_end, app_date, app_people, app_team, app_registrants)
-       VALUES ('{$problem}', $priority, '{$contactEmail}')
+       VALUES ($app_tier, $app_time_enter, $app_time_exit, $app_activity_start, $app_activity_end, $app_date, $app_people, $app_team, $app_registrants)
 
-INSERT INTO locations ( loc_name)
-       VALUES ('{$problem}', $priority, '{$contactEmail}')
+INSERT INTO locations (loc_name)
+       VALUES ($loc_name)
 
-INSERT INTO areas ( area_name)
-       VALUES ('{$problem}', $priority, '{$contactEmail}')
+INSERT INTO areas (area_name)
+       VALUES ($area_name)
 SQL;
 
 // Execute the query and redirect to the list
@@ -57,5 +57,3 @@ else
 }
 
 $conn->close();
-// comment
-// comment
