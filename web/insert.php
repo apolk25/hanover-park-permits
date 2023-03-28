@@ -71,5 +71,3 @@ else
 
 
 $conn->close();
-// comment
-// comment

@@ -13,7 +13,7 @@ include('library.php');
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="style.css?v=<?php echo rand(); ?>">
 
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
+<!-- <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">Hanover Sports</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -35,9 +35,9 @@ include('library.php');
       </ul>
     </div>
   </div>
-</nav>
+</nav> -->
 
-<div class="container">
+<div class="container-fluid">
     <!-- <h1 class="titleTicket">New Ticket</h1> -->
     <h2 class="credTicket">Hanover Parks & Recreation</h2>
     <h3 class="addTicket">665 Center Street</h3>
@@ -49,83 +49,77 @@ include('library.php');
 
 <form action="insert.php" method="POST">
   <div class="conatiner-form">
-        <input type="cus_first_name" >
-        <div class="form-text">First Name Of Applicant</div>
+    <div class="form-text">First Name Of Applicant</div>
+    <input type="cus_first_name" >
+    
+    <div class="form-text">Last Name Of Applicant</div>
+    <input name="cus_last_name" >
 
-        <input name="cus_last_name" >
-        <div class="form-text">Last Name Of Applicant</div>
+    <div class="form-text">Name Of Organization</div>
+    <input name="org" >
+    
+    <div class="form-text">Mailing Address</div>
+    <input name="address" >
+    
+    <div class="form-text">Phone</div>
+    <input name="phone" >
+    
+    <div class="form-text">Email</div>
+    <input name="email">
 
-        <input name="org" >
-        <div class="form-text">Name Of Organization</div>
+    <div class="form-text">Tier</div>
+    <select name="tier" class="form-select" aria-label="Default select example">
+        <option selected>Fields Requested</option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+        <option value="4">Four</option>
+        <option value="5">Five</option>
+        <option value="6">Six</option>
+        <option value="7">Seven</option>
+        <option value="8">Eight</option>
+        <option value="9">Nine</option>
+    </select>
 
-        <input name="address" >
-        <div class="form-text">Mailing Address</div>
+    <div class="form-text">Dates Requested</div>
+    <input name="dates_requested">
+    
+    <div class="form-text">Day(s) of Week</div>
+    <input name="days_of_week">
+   
+    <div class="form-text">Entrance Time To Facility</div>
+    <input name="entrance_time">
+    
+    <div class="form-text">Exit Time From Facility</div>
+    <input name="exit_time">
+    
+    <div class="form-text">Time Activity Starts</div>
+    <input name="activity_start_time">
+    
+    <div class="form-text">Time Activity ends</div>
+    <input name="activity_end_time">
+    
+    <div class="form-text">Nature Of Activity</div>
+    <input name="activity_nature">
+    
+    <div class="form-text">Estimated # of People Attending</div>
+    <input name="num_people">
+    
+    <div class="form-text">Number Of Registrants</div>
+    <input name="num_registrants">
+    
+    <div class="form-text">Number of Teams</div>
+    <input name="num_teams">
+    <br>
+    
+    <button id=save-button >Save</button> 
+    <a href="index.php?content=list" class="btn btn-secondary" role="button">Cancel</a>
 
-        <input name="phone" >
-        <div class="form-text">Phone</div>
-
-        <input name="email" >
-        <div class="form-text">Email</div>
-
-        <input name="tier" >
-        <div class="form-text">Tier</div>
-
-        <select name="fields_requested" class="form-select" aria-label="Default select example">
-            <option selected>Fields Requested</option>
-            <option value="1">One</option>
-            <option value="2">Two</option>
-            <option value="3">Three</option>
-        </select>
-
-        <input name="dates_requested">
-        <div class="form-text">Dates Requested</div>
-
-        <input name="days_of_week">
-        <div class="form-text">Day(s) of Week</div>
-
-        <input name="entrance_time">
-        <div class="form-text">Entrance Time To Facility</div>
-
-        <input name="exit_time">
-        <div class="form-text">Exit Time From Facility</div>
-
-        <input name="activity_start_time">
-        <div class="form-text">Time Activity Starts</div>
-
-        <input name="activity_end_time">
-        <div class="form-text">Time Activity ends</div>
-
-        <input name="activity_nature">
-        <div class="form-text">Nature Of Activity</div>
-
-        <input name="num_people">
-        <div class="form-text">Estimated # of People Attending</div>
-
-        <input name="num_registrants">
-        <div class="form-text">Number Of Registrants</div>
-
-        <input name="num_teams">
-        <div class="form-text">Number of Teams</div>
-
-
-        <button id=save-button >Save</button> 
-        <a href="index.php?content=list" class="btn btn-secondary" role="button">Cancel</a>
+        
     </div>
     
     
-    <!-- <div class="row g-3 align-items-center">
-    <div class="col-auto">
-        <label for="inputPassword6" class="col-form-label">Password</label>
-    </div>
-    <div class="col-auto">
-        <input type="password" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline">
-    </div>
-    <div class="col-auto">
-        <span id="passwordHelpInline" class="form-text">
-        Must be 8-20 characters long.
-        </span>
-    </div>
-    </div> -->
+    
     
 
 

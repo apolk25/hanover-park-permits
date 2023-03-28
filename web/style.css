@@ -105,7 +105,7 @@
 
 .form-name {
     border: none;
-    border-bottom: 2px solid black;
+    /* border-bottom: 2px solid black; */
     width: 35%;
     border-radius: 0%;
 }
@@ -113,11 +113,18 @@
 .conatiner-form {
     padding-left: 25%;
     padding-right: 25%;
+    text-align: center;
 }
 
 .form-text {
     color: grey;
-    font-size: small;
-    font-weight: 400;
+    font-size: large;
+    font-weight: 600;
 
 }
+
+input {
+    stroke-width: 15%;
+
+}
+
