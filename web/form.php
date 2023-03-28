@@ -1,5 +1,5 @@
 <?php
-
+include('library.php');
 /*************************************************************************************************
  * ticketNew.php
  *
@@ -48,24 +48,72 @@
 
 
 <form action="insert.php" method="POST">
-    <div class="conatiner-form">
-      <div class="form-text">First Name Of Applicant</div>
-      <input type="name" class="form-control form-name">
+  <div class="conatiner-form">
+    <div class="form-text">First Name Of Applicant</div>
+    <input type="cus_first_name" >
+    
+    <div class="form-text">Last Name Of Applicant</div>
+    <input name="cus_last_name" >
 
-      <div class="form-text">Last Name Of Applicant</div>
-      <input type="name" class="form-control form-name">
+    <div class="form-text">Name Of Organization</div>
+    <input name="org" >
+    
+    <div class="form-text">Mailing Address</div>
+    <input name="address" >
+    
+    <div class="form-text">Phone</div>
+    <input name="phone" >
+    
+    <div class="form-text">Email</div>
+    <input name="email">
 
-      <select class="form-select"">
-          <option selected>Fields Requested</option>
-          <option value="1">One</option>
-          <option value="2">Two</option>
-          <option value="3">Three</option>
-      </select>
+    <div class="form-text">Tier</div>
+    <select name="tier" class="form-select" aria-label="Default select example">
+        <option selected>Fields Requested</option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+        <option value="4">Four</option>
+        <option value="5">Five</option>
+        <option value="6">Six</option>
+        <option value="7">Seven</option>
+        <option value="8">Eight</option>
+        <option value="9">Nine</option>
+    </select>
 
-
-
-        
-
+    <div class="form-text">Dates Requested</div>
+    <input name="dates_requested">
+    
+    <div class="form-text">Day(s) of Week</div>
+    <input name="days_of_week">
+   
+    <div class="form-text">Entrance Time To Facility</div>
+    <input name="entrance_time">
+    
+    <div class="form-text">Exit Time From Facility</div>
+    <input name="exit_time">
+    
+    <div class="form-text">Time Activity Starts</div>
+    <input name="activity_start_time">
+    
+    <div class="form-text">Time Activity ends</div>
+    <input name="activity_end_time">
+    
+    <div class="form-text">Nature Of Activity</div>
+    <input name="activity_nature">
+    
+    <div class="form-text">Estimated # of People Attending</div>
+    <input name="num_people">
+    
+    <div class="form-text">Number Of Registrants</div>
+    <input name="num_registrants">
+    
+    <div class="form-text">Number of Teams</div>
+    <input name="num_teams">
+    <br>
+    
+    <button id=save-button >Save</button> 
+    <a href="index.php?content=list" class="btn btn-secondary" role="button">Cancel</a>
 
         
     </div>
@@ -78,3 +126,4 @@
     <!-- <button type="submit" class="btn btn-primary">Save</button>
     <a href="index.php?content=list" class="btn btn-secondary" role="button">Cancel</a> -->
 </form>
+
