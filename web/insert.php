@@ -44,13 +44,13 @@ SQL;
 // -- INSERT INTO areas ( area_name)
 // --        VALUES ()
 
-// Execute the query and redirect to the list
+// Execute the query and redirect to the list    
 if ($conn->query($cus_insert) == TRUE)
 {
        $last_id = $conn->insert_id;
        $app_insert = <<<SQL
-       INSERT INTO applications ( app_cus_id, app_tier, app_time_enter, app_time_exit, app_activity_start, app_activity_end, app_date, app_people, app_teams, app_registrants)
-              VALUES ($last_id, $app_tier, '$app_time_enter', '$app_time_exit', '$app_activity_start', '$app_activity_end', '$app_date', $app_people, $app_team, $app_registrants)
+       INSERT INTO applications ( app_cus_id, app_tier, app_date, app_people, app_teams, app_registrants)
+              VALUES ($last_id, $app_tier, '$app_date', $app_people, $app_team, $app_registrants)
 SQL;
        echo $app_insert;
        if ($conn->query($app_insert) == TRUE)

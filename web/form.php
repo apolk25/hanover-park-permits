@@ -50,7 +50,7 @@ include('library.php');
 <form action="insert.php" method="POST">
   <div class="conatiner-form">
     <div class="form-text">First Name Of Applicant</div>
-    <input type="cus_first_name" >
+    <input name="cus_first_name" >
     
     <div class="form-text">Last Name Of Applicant</div>
     <input name="cus_last_name" >
