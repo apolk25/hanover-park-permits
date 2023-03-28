@@ -1,11 +1,12 @@
 -- Inserting records into a table
-use parksys;
-insert into location (loc_id, loc_name) values (1, 'Briggs Field');
-insert into location (loc_id, loc_name) values (2, 'Ceurvels Field');
-insert into location (loc_id, loc_name) values (3, 'Calvin J. Ellis Field');
-insert into location (loc_id, loc_name) values (4, 'Forge Pond Park');
-insert into location (loc_id, loc_name) values (5, 'Amos Gallant Field');
-insert into location (loc_id, loc_name) values (6, 'B Everett Hall');
+use permit;
+
+insert into locations (loc_id, loc_name) values (1, 'Briggs Field');
+insert into locations (loc_id, loc_name) values (2, 'Ceurvels Field');
+insert into locations (loc_id, loc_name) values (3, 'Calvin J. Ellis Field');
+insert into locations (loc_id, loc_name) values (4, 'Forge Pond Park');
+insert into locations (loc_id, loc_name) values (5, 'Amos Gallant Field');
+insert into locations (loc_id, loc_name) values (6, 'B Everett Hall');
 										
 insert into areas (area_name, area_loc_id) values ('T-Ball', 1);
 

@@ -1,4 +1,8 @@
+Drop database permit;
+
 CREATE DATABASE `permit` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
+
+use permit; 
 
 CREATE TABLE `afl` (
   `afl_id` int NOT NULL AUTO_INCREMENT,
@@ -11,10 +15,10 @@ CREATE TABLE `applications` (
   `app_id` int NOT NULL AUTO_INCREMENT,
   `app_cus_id` int NOT NULL,
   `app_tier` int NOT NULL,
-  `app_time_enter` datetime NOT NULL,
-  `app_time_exit` datetime NOT NULL,
-  `app_activity_start` datetime NOT NULL,
-  `app_activity_end` blob NOT NULL,
+  `app_time_enter` datetime,
+  `app_time_exit` datetime,
+  `app_activity_start` datetime,
+  `app_activity_end` datetime,
   `app_date` date NOT NULL,
   `app_people` int DEFAULT NULL,
   `app_teams` int DEFAULT NULL,
