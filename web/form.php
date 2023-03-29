@@ -1,41 +1,13 @@
 <?php
-include('library.php');
-/*************************************************************************************************
- * ticketNew.php
- *
- * Content page to display an entry form for a new ticket. This page is expected to be contained
- * within index.php.
- *************************************************************************************************/
+        include('library.php');
 
 ?>
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="style.css?v=<?php echo rand(); ?>">
+<script src="code.js"></script>
 
-<!-- <nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Hanover Sports</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-      <ul class="navbar-nav">
-    
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown link
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav> -->
 
 <div class="container-fluid">
     <!-- <h1 class="titleTicket">New Ticket</h1> -->
@@ -43,8 +15,6 @@ include('library.php');
     <h3 class="addTicket">665 Center Street</h3>
     <h3 class="addTicket">Hanover, MA 02339</h3>
 </div>
-
-
 
 
 <form action="insert.php" method="POST">
@@ -67,22 +37,27 @@ include('library.php');
     <div class="form-text">Email</div>
     <input name="email">
 
-    <div class="form-text">Tier</div>
-    <select name="tier" class="form-select" aria-label="Default select example">
-        <option selected>Fields Requested</option>
-        <option value="1">One</option>
-        <option value="2">Two</option>
-        <option value="3">Three</option>
-        <option value="4">Four</option>
-        <option value="5">Five</option>
-        <option value="6">Six</option>
-        <option value="7">Seven</option>
-        <option value="8">Eight</option>
-        <option value="9">Nine</option>
+    <div class="form-text">Select a location</div>
+    <select name="location" class="form-select" aria-label="Default select example">
+      <?php
+        $conn = get_database_connection();
+        $sql = "select * from areas join locations on loc_id = area_loc_id";
+        $result = $conn->query($sql);
+        $count = 0;
+        while($record = $result -> fetch_assoc())
+        {
+            echo '<option value="' . $count . '">';
+            echo $record['loc_name'];
+            echo " ";
+            echo $record['area_name'];
+            echo '</option>';
+            $count++;
+        }
+        ?>
     </select>
 
     <div class="form-text">Dates Requested</div>
-    <input name="dates_requested">
+    <input name="dates_requested" type="date">
     
     <div class="form-text">Day(s) of Week</div>
     <input name="days_of_week">
