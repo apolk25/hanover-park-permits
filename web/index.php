@@ -18,9 +18,17 @@
 
 
 <body>
+    
+    
     <img class="landingimg" src="forge.jpeg" width="100%" height="90%">
+    <div class="container">
+        <div class="button-div">
+            <h1 class="field-text">Proceed to Form</h1>
+            <a href="form.php"><button class="button button5 centered">Apply Now</button></a>
+            <a href="available-fields.php"><button class="button button5 centered">View Available Fields</button></a>
 
-
+        </div>
+    </div>
     <!-- <div class="background">
         <div class="color">
 
@@ -29,14 +37,6 @@
     </div> -->
     <div class="bottom-cover">
         <a href="https://www.hanover-ma.gov/"><img src="banner.png" class="banner"></a>
-    </div>
-    <div class="container">
-        <div class="button-div">
-            <h1 class="field-text">Proceed to Form</h1>
-            <a href="form.php"><button class="button button5 centered">Apply Now</button></a>
-            <a href="available-fields.php"><button class="button button5 centered">View Available Fields</button></a>
-
-        </div>
     </div>
 
     
