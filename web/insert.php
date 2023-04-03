@@ -24,6 +24,9 @@ $app_people = $conn->real_escape_string($num_people);
 $app_team = $conn->real_escape_string($num_teams);
 $app_registrants = $conn->real_escape_string($num_registrants);
 
+// echo $fieldIds[0];
+
+
 // $area_name = $conn->real_escape_string($area_name);
 
 // $loc_name = $conn->real_escape_string($loc_name);
@@ -38,6 +41,8 @@ INSERT INTO customers (cus_first_name, cus_last_name, cus_organization, cus_phon
 SQL;
 
 
+
+
 // -- INSERT INTO locations ( loc_name)
 // --        VALUES ()
 
@@ -47,27 +52,42 @@ SQL;
 // Execute the query and redirect to the list    
 if ($conn->query($cus_insert) == TRUE)
 {
-       $last_id = $conn->insert_id;
-       $app_insert = <<<SQL
+    $last_id = $conn->insert_id;
+    $app_insert = <<<SQL
        INSERT INTO applications ( app_cus_id, app_tier, app_date, app_people, app_teams, app_registrants)
               VALUES ($last_id, $app_tier, '$app_date', $app_people, $app_team, $app_registrants)
 SQL;
-       echo $app_insert;
-       if ($conn->query($app_insert) == TRUE)
-       {
-           header('Location: form.php');
-           echo "<h1>Thank you for submitting your application</h1>";
-       }
-       else
-       {
-           echo "Error inserting record: " . $conn->error;
-       }
+echo $app_insert;
+if ($conn->query($app_insert) == TRUE)
+{
+    $last_id = $conn->insert_id;
+    $fieldIds = explode(",", $fieldIds);
+
+    foreach ($fieldIds as &$id) 
+    {
+        $afl_insert = <<<SQL
+        INSERT INTO afl ( afl_areas_id)
+              VALUES ($id,$last_id)
+        SQL;
+    }
+
+    header('Location: form.php');
+    echo "<h1>Thank you for submitting your application</h1>";
 }
 else
 {
-       echo "Error inserting record: " . $conn->error;
+    echo "Error inserting record: " . $conn->error;
 }
+}
+else
+{
+    echo "Error inserting record: " . $conn->error;
+}
+
 
 
 
 $conn->close();
+
+
+// save application, when someone saves a field
