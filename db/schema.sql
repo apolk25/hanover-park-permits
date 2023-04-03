@@ -1,5 +1,4 @@
-Drop database permit;
-
+drop database if exists permit;
 CREATE DATABASE `permit` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
 
 use permit; 
@@ -27,10 +26,10 @@ CREATE TABLE `applications` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 CREATE TABLE `areas` (
-  `areas_id` int NOT NULL AUTO_INCREMENT,
+  `area_id` int NOT NULL AUTO_INCREMENT,
   `area_name` varchar(100) NOT NULL,
   `area_loc_id` int NOT NULL,
-  PRIMARY KEY (`areas_id`)
+  PRIMARY KEY (`area_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 CREATE TABLE `customers` (
