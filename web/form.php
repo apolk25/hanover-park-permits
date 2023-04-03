@@ -38,20 +38,19 @@
     <input name="email">
 
     <div class="form-text">Select a location</div>
-    <select name="location" class="form-select" aria-label="Default select example">
+    <select name="fieldIds" class="form-select" aria-label="Default select example" multiple>
       <?php
         $conn = get_database_connection();
         $sql = "select * from areas join locations on loc_id = area_loc_id";
         $result = $conn->query($sql);
-        $count = 0;
         while($record = $result -> fetch_assoc())
         {
-            echo '<option value="' . $count . '">';
+            echo '<option value="' . $record['areas_id'] . '">';
             echo $record['loc_name'];
             echo " ";
             echo $record['area_name'];
             echo '</option>';
-            $count++;
+            // $count++;
         }
         ?>
     </select>
