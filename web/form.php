@@ -37,7 +37,7 @@
     <div class="form-text">Email</div>
     <input name="email">
 
-    <div class="form-text">Select a location</div>
+    <div class="form-text">Select a tier</div>
     <select name="tier" class="form-select" aria-label="Default select example" >
             <option value="1">1</option>
             <option value="2">2</option>
