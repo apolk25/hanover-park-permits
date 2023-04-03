@@ -60,7 +60,7 @@
         $result = $conn->query($sql);
         while($record = $result -> fetch_assoc())
         {
-            echo '<option value="' . $record['areas_id'] . '">';
+            echo '<option value="' . $record['area_id'] . '">';
             echo $record['loc_name'];
             echo " ";
             echo $record['area_name'];
