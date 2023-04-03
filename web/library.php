@@ -23,7 +23,7 @@ function get_content()
 function get_database_connection(){
         $servername = "localhost";
         $username = "root";
-        $password = "Adampolk25!";
+        $password = "";
         $dbname = "permit";
 
         $conn = new mysqli($servername, $username, $password, $dbname);
