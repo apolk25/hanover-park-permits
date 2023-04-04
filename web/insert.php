@@ -57,22 +57,25 @@ if ($conn->query($cus_insert) == TRUE)
        INSERT INTO applications ( app_cus_id, app_tier, app_date, app_people, app_teams, app_registrants)
               VALUES ($last_id, $app_tier, '$app_date', $app_people, $app_team, $app_registrants)
 SQL;
-echo $app_insert;
+
 if ($conn->query($app_insert) == TRUE)
 {
     $last_id = $conn->insert_id;
-    $fieldIds = explode(",", $fieldIds);
-
-    foreach ($fieldIds as &$id) 
+    $fieldIdArr = explode(",", $fieldIds);
+   
+    foreach ($fieldIdArr as &$fieldId) 
     {
+
         $afl_insert = <<<SQL
-        INSERT INTO afl ( afl_areas_id)
-              VALUES ($id,$last_id)
+        INSERT INTO afl ( afl_areas_id, afl_app_id)
+              VALUES ($fieldId,$last_id)
         SQL;
+        echo $afl_insert;
+        $conn->query($afl_insert);
     }
 
     header('Location: form.php');
-    echo "<h1>Thank you for submitting your application</h1>";
+   
 }
 else
 {
