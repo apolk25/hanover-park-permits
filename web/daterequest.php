@@ -1,8 +1,34 @@
 <?php
 
-include("library.php");
+include('library.php');
+/*************************************************************************************************
+ * ticketDetail.php
+ *
+ * Content page to display the detail form for a single ticket. This page is expected to be
+ * contained within index.php.
+ *************************************************************************************************/
+
+
+    $conn = get_database_connection();
+
+    $date = $conn->real_escape_string($app_date);
+
+
+    $sqlreq =<<<SQL
+    SELECT fields.*
+    FROM fields
+    Left Outer JOIN AFL ON app_id = afl_app_id
+    left outer JOIN Areas ON area_id = afl_areas_id
+    SQL;
+
+    $sql = "select area_name from areas, join applications on app_dates_requested <> $date, ";
+    $result = $conn->query($sqlreq);
+    echo $sql;
+    $row = $result->fetch_assoc();
 
 ?>
+
+
 
 <html lang="en">
 <head>
@@ -13,30 +39,10 @@ include("library.php");
     <title>Document</title>
 </head>
 <body>
-        
-    <?php
-
-    extract($_REQUEST);
-    echo "<h1>Fields available on $date:</h1>";
-    $conn = get_database_connection();
-
-       
-    $date = $conn->real_escape_string($date);
 
 
-        
+<h2>Details for Ticket #<?php echo $row['area_name']; ?></h2>
 
-    $sql = "select area_name from areas, join applications on app_dates_requested <> $date, ";
-    $conn->query($sql);
-    echo $sql;
-
-    ?>
-
-
-
-
-
-</body>
-
-
-</html>
+<form method="POST">
+    <input onchange="getFeilds(this.value)" type="date" value=""/>
+</form>
