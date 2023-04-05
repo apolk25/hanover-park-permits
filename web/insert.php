@@ -30,12 +30,14 @@ $app_registrants = $conn->real_escape_string($num_registrants);
 // $area_name = $conn->real_escape_string($area_name);
 
 // $loc_name = $conn->real_escape_string($loc_name);
+$fieldIdArr = explode(",", $fieldIds);
+if (validate($app_date, $fieldIdArr))
+{
 
-
-
-
-// Build the INSERT statement
-$cus_insert = <<<SQL
+    
+    
+    // Build the INSERT statement
+    $cus_insert = <<<SQL
 INSERT INTO customers (cus_first_name, cus_last_name, cus_organization, cus_phone,cus_email, cus_address)
        VALUES ('$cus_first_name', '$cus_last_name', '$cus_org', '$cus_phone', '$cus_email', '$cus_address')
 SQL;
@@ -61,11 +63,11 @@ SQL;
 if ($conn->query($app_insert) == TRUE)
 {
     $last_id = $conn->insert_id;
-    $fieldIdArr = explode(",", $fieldIds);
-   
+    
+    
     foreach ($fieldIdArr as &$fieldId) 
     {
-
+        
         $afl_insert = <<<SQL
         INSERT INTO afl ( afl_areas_id, afl_app_id)
               VALUES ($fieldId,$last_id)
@@ -73,9 +75,9 @@ if ($conn->query($app_insert) == TRUE)
         echo $afl_insert;
         $conn->query($afl_insert);
     }
-
+    
     header('Location: form.php');
-   
+    
 }
 else
 {
@@ -91,6 +93,9 @@ else
 
 
 $conn->close();
+}else{
+    echo("The field is already reserved.");
+}
 
 
 // save application, when someone saves a field

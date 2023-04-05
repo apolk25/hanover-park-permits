@@ -19,11 +19,24 @@ function get_content()
     return $content;
 }
 
+function validate($date,$field)
+{
+    // select *
+    // from afl 
+    // join applications on app_id = afl_app_id
+    // join areas on areas_id = afl_areas_id
+    // where app_date = $date
+    // and afl_areas_id = $field
+
+    // me and leyton only partially did the statement but this was our idea.
+
+    return false;
+}
 
 function get_database_connection(){
         $servername = "localhost";
         $username = "root";
-        $password = "12354678910";
+        $password = "Password1234";
         $dbname = "permit";
 
         $conn = new mysqli($servername, $username, $password, $dbname);
