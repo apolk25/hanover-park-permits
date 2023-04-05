@@ -118,7 +118,7 @@ button {
 
 }
 
-input {
+.inputfields {
     margin: 15px 0;
     font-size: 16px;
     padding: 10px;
@@ -131,4 +131,9 @@ input {
     color: white;
     outline: none;
 
+}
+
+
+input[type="date"]{
+    width: 30%;
 }
