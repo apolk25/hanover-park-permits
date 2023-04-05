@@ -9,30 +9,19 @@ include('library.php');
  *************************************************************************************************/
 
 
-    $conn = get_database_connection();
+    // $conn = get_database_connection();
 
-    $date = $conn->real_escape_string($app_date);
+    // $date = $conn->real_escape_string($app_date);
 
 
     
-    $row = $result->fetch_assoc();
+    // $row = $result->fetch_assoc();
 
 ?>
 
 <script>
     function getFields(date) {
-        <?php
-            $sqlreq =<<<SQL
-            SELECT Locations.*
-            FROM Locations
-            -- Left outer JOIN applications ON app_id = afl_areas_id
-            Left Outer JOIN AFL ON app_id = afl_app_id
-            Left outer JOIN Areas ON area_id = afl_areas_id  
-            Where app_date <> $date
-            SQL;
-            $result = $conn->query($sqlreq);
-            echo $sql;
-        ?>
+        location.href = 'datequery.php?app_date=' + date;
     }
 </script>
 
@@ -52,3 +41,6 @@ include('library.php');
 <form method="POST">
     <input id="date" onchange="getFields(this.value)" type="date"/>
 </form>
+
+
+<!-- <p>"Hi <?php echo $result?> </p> -->
