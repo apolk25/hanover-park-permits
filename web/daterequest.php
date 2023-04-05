@@ -43,4 +43,3 @@ include('library.php');
 </form>
 
 
-<!-- <p>"Hi <?php echo $result?> </p> -->
