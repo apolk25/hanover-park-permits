@@ -38,8 +38,10 @@ include('library.php');
 </head>
 <body>
 
-<form method="POST">
-    <input id="date" onchange="getFields(this.value)" type="date"/>
-</form>
+<div class="container">
+    <form method="POST">
+        <input id="date" onchange="getFields(this.value)" type="date"/>
+    </form>
+</div>
 
 

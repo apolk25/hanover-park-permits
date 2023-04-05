@@ -25,7 +25,7 @@
         <div class="button-div">
             <h1 class="field-text">Proceed to Form</h1>
             <a href="form.php"><button class="button button5 centered">Apply Now</button></a>
-            <a href="available-fields.php"><button class="button button5 centered">View Available Fields</button></a>
+            <a href="daterequest.php"><button class="button button5 centered">View Available Fields</button></a>
 
         </div>
     </div>

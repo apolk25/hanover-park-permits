@@ -4,7 +4,7 @@
     $conn = get_database_connection();
     $app_date = $conn->real_escape_string($app_date);
     echo "<h1>";
-    echo $app_date;
+    echo "Availible Dates on "  . $app_date;
     echo "</h1>";
     $query = <<<SQL
         SELECT Areas.*
@@ -19,9 +19,9 @@
     $result = $conn->query($query);
     while($record = $result -> fetch_assoc()){
 
-        echo "<h6>";
+        echo "<h2>";
         // echo $record['loc_name'];
         echo $record['area_name'];
-        echo "</h6>";
+        echo "</h2>";
     }
 ?>
